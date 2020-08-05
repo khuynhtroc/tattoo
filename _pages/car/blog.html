@@ -1,0 +1,130 @@
+---
+layout: car/page
+title: "Tin Tức và Sự Kiện Toyota Thái Hòa Từ Liêm"
+h1-title: "Blog"
+meta-title: "Tin Tức và Sự Kiện Toyota Thái Hòa Từ Liêm"
+description: ""
+meta-description: ""
+meta-keywords: ""
+permalink: "car/blog/"
+published: true
+sitemap: true
+---
+
+
+
+
+			<div class="content-wrap">
+
+				<div class="container">
+					{% for post in site.categories.hot limit:1 %}
+					<div class="jumbotron p-4 p-md-5 dark position-relative rounded" style="background: url('{{ site.url }}/{{ post.image }}') center center / cover;">
+						<div class="col-md-6 px-0 py-3" style="z-index: 1">
+							<!--strong class="d-inline-block mb-2 t600 uppercase ls2">World</strong-->
+							<h2 class="t600 mb-2">{{ post.title }}</h2>
+							<!--div class="mb-3">Nov 12, 2018</div-->
+							<!--p class="my-4 h6 text-white-50">{{ post.excerpt }}...</p-->
+							<a href="{{ site.url }}{{ post.url }}" class="button button-rounded button-3d button-white button-light nott ls0 nomargin">Xem chi tiết...</a>
+						</div>
+						<div class="video-wrap rounded" style="position: absolute; top: 0; left: 0; height: 100%; z-index: 0">
+							<div class="video-overlay" style="background: rgba(0,0,0,0.5);"></div>
+						</div>
+					</div>
+					{% endfor %}
+					<div class="row">
+						{% for post in site.categories.car-news %}
+						<div class="col-md-4 mb-4">
+							<div class="card shadow-sm">
+								<img class="card-img-top" src="{{ site.url }}/{{ post.image }}" alt="{{ post.title }}">
+								<div class="card-body">
+									<!--strong class="d-inline-block mb-2 text-black-50">{{ post.category }}</strong-->
+									<h3 class="mb-2 t600" style="font-size: 18px;"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+									<!--a href="#" class="card-link">Auto Expo</a>
+									<a href="#" class="card-link">Nov 12, 2018</a-->
+									<!--p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p-->
+									<a href="{{ site.url }}{{ post.url }}" class="button button-3d button-rounded nott t600 ls0 nomargin">Xem thêm...</a>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+
+						<!--div class="col-md-4 mb-4">
+							<div class="card shadow-sm">
+								<img class="card-img-top" src="{{ site.url }}/car/assets/media/single/911cars/2.jpg" alt="Card image cap">
+								<div class="card-body">
+									<strong class="d-inline-block mb-2 text-black-50">World</strong>
+									<h4 class="mb-2 t600 uppercase"><a class="text-dark" href="#">Audi E-tron: 248-mile intelligent charge technology confirmed</a></h4>
+									<a href="#" class="card-link">Auto Expo</a>
+									<a href="#" class="card-link">Nov 12, 2018</a>
+									<p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="button button-3d button-rounded nott t600 ls0 nomargin">Continue reading..</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="card shadow-sm">
+								<img class="card-img-top" src="{{ site.url }}/car/assets/media/single/911cars/3.jpg" alt="Card image cap">
+								<div class="card-body">
+									<strong class="d-inline-block mb-2 text-black-50">World</strong>
+									<h4 class="mb-2 t600 uppercase"><a class="text-dark" href="#">BMW iX3: first preview pictures of upcoming electric SUV</a></h4>
+									<a href="#" class="card-link">Auto Expo</a>
+									<a href="#" class="card-link">Nov 12, 2018</a>
+									<p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="button button-3d button-rounded nott t600 ls0 nomargin">Continue reading..</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="card shadow-sm">
+								<img class="card-img-top" src="{{ site.url }}/car/assets/media/single/911cars/4.jpg" alt="Card image cap">
+								<div class="card-body">
+									<strong class="d-inline-block mb-2 text-black-50">World</strong>
+									<h4 class="mb-2 t600 uppercase"><a class="text-dark" href="#">Byton previews new electric saloon concept ahead of CES Asia</a></h4>
+									<a href="#" class="card-link">Auto Expo</a>
+									<a href="#" class="card-link">Nov 12, 2018</a>
+									<p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="button button-3d button-rounded nott t600 ls0 nomargin">Continue reading..</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 mb-4">
+							<div class="card shadow-sm">
+								<img class="card-img-top" src="{{ site.url }}/car/assets/media/single/911cars/5.jpg" alt="Card image cap">
+								<div class="card-body">
+									<strong class="d-inline-block mb-2 text-black-50">World</strong>
+									<h4 class="mb-2 t600 uppercase"><a class="text-dark" href="#">Audi E-tron: 248-mile intelligent charge technology confirmed</a></h4>
+									<a href="#" class="card-link">Auto Expo</a>
+									<a href="#" class="card-link">Nov 12, 2018</a>
+									<p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="button button-3d button-rounded nott t600 ls0 nomargin">Continue reading..</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="card shadow-sm">
+								<img class="card-img-top" src="{{ site.url }}/car/assets/media/single/911cars/6.jpg" alt="Card image cap">
+								<div class="card-body">
+									<strong class="d-inline-block mb-2 text-black-50">World</strong>
+									<h4 class="mb-2 t600 uppercase"><a class="text-dark" href="#">BMW iX3: first preview pictures of upcoming electric SUV</a></h4>
+									<a href="#" class="card-link">Auto Expo</a>
+									<a href="#" class="card-link">Nov 12, 2018</a>
+									<p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="button button-3d button-rounded nott t600 ls0 nomargin">Continue reading..</a>
+								</div>
+							</div>
+						</div>
+
+					</div-->
+
+					<!--ul class="pagination mt-1 mb-0 clearfix">
+						<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+					</ul-->
+				</div>
+
+			</div>

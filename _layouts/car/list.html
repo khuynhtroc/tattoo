@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="vi-VN">
+<head>
+
+	{% include car/head.html %}
+
+	{% include car/head_page.html %}
+
+	<!-- Bootstrap Select CSS -->
+	<link rel="stylesheet" href="{{ site.url }}/car/assets/css/components/bs-select.css" type="text/css" />
+
+	<!-- Bootstrap Switch CSS -->
+	<link rel="stylesheet" href="{{ site.url }}/car/assets/css/components/bs-switches.css" type="text/css" />
+
+	{% include car/head_script.html %}
+
+	{% include car/head_style.html %}
+
+</head>
+
+<body class="stretched side-push-panel" data-loader-html="<div><img src='{{ site.url }}/car/assets/media/page-loader.gif' alt='Loader'></div>">
+
+	<!-- Side Panel Overlay -->
+	<div class="body-overlay"></div>
+
+	{% include car/site_panel.html %}
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		{% include car/header.html %}
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-parallax page-title-dark" style="background-image: url('{{ site.url }}/car/assets/media/hero-slider/4.jpg'); background-size: cover; padding: 120px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+
+			<div class="container clearfix">
+				<h1>{{ page.title }}</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="{{ site.url }}/car/">Trang chủ</a></li>
+					<li class="breadcrumb-item"><a href="{{ site.url }}/car/list/">Xe mới</a></li>
+					<li class="breadcrumb-item active" aria-current="page">{{ page.h1-title }}</li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="clearfix" style="overflow: visible">
+
+			{{ content }}
+
+		</section><!-- #content end -->
+
+		{% include car/footer.html %}
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+	<!-- Contact Button
+	============================================= -->
+	<div id="contact-me" class="icon-line-mail side-panel-trigger bgcolor"></div>
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="{{ site.url }}/car/assets/js/jquery.js"></script>
+	<script src="{{ site.url }}/car/assets/js/plugins.js"></script>
+	<!-- Bootstrap Select Plugin -->
+	<script src="{{ site.url }}/car/assets/js/components/bs-select.js"></script>
+
+	<!-- Bootstrap Switch Plugin -->
+	<script src="{{ site.url }}/car/assets/js/components/bs-switches.js"></script>
+
+	{% include car/footer_script.html %}
+
+	<script>
+
+		jQuery(".bt-switch").bootstrapSwitch();
+
+	</script>
+
+</body>
+</html>

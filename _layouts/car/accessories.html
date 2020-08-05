@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="vi-VN">
+<head>
+
+	{% include car/head.html %}
+
+	{% include car/head_page.html %}
+
+	{% include car/head_script.html %}
+
+	{% include car/head_style.html %}
+
+</head>
+
+<body class="stretched side-push-panel" data-loader-html="<div><img src='{{ site.url }}/car/assets/media/page-loader.gif' alt='Loader'></div>">
+
+	<!-- Side Panel Overlay -->
+	<div class="body-overlay"></div>
+
+	{% include car/site_panel.html %}
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		{% include car/header.html %}
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-parallax page-title-dark" style="background-image: url('{{ site.url }}/car/assets/images/page-title.jpg'); background-size: cover; padding: 140px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+
+			<div class="container clearfix">
+				<h1>{{ page.title }}</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="{{ site.url }}/car/">Trang chủ</a></li>
+					<li class="breadcrumb-item"><a href="{{ site.url }}/car/list/">Xe mới</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Phụ kiện</li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu">
+			<div id="page-menu-wrap" class="not-dark shadow-sm">
+				<div class="container clearfix">
+
+					<nav class="one-page-menu fnone d-xl-flex d-lg-flex justify-content-xl-center justify-content-lg-center" data-easing="easeInOutExpo" data-offset="120">
+						<ul>
+							<li><a href="#" data-href="#section-wheel" data-highlight="yellow"><div>Tyres & Wheels</div></a></li>
+							<li><a href="#" data-href="#section-music" data-highlight="yellow"><div>Music Systems</div></a></li>
+							<li><a href="#" data-href="#section-engines" data-highlight="yellow"><div>Engines & Parts</div></a></li>
+							<li><a href="#" data-href="#section-seats" data-highlight="yellow"><div>Seat Covers</div></a></li>
+							<li><a href="#" data-href="#section-lights" data-highlight="yellow"><div>Lights</div></a></li>
+						</ul>
+					</nav>
+
+				<div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+
+				</div>
+			</div>
+		</div><!-- #page-menu end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="clearfix">
+
+			{{ content }}
+
+		</section><!-- #content end -->
+
+		{% include car/footer.html %}
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+	<!-- Contact Button
+	============================================= -->
+	<div id="contact-me" class="icon-line-mail side-panel-trigger bgcolor"></div>
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="{{ site.url }}/car/assets/js/jquery.js"></script>
+	<script src="{{ site.url }}/car/assets/js/plugins.js"></script>
+
+	{% include car/footer_script.html %}
+
+</body>
+</html>

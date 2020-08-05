@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="vi-VN">
+<head>
+
+	{% include car/head.html %}
+
+	{% include car/head_page.html %}
+
+	{% include car/head_script.html %}
+
+	{% include car/head_style.html %}
+
+	<style type="text/css">
+		#page-title:hover .video-wrap,
+		#page-title:hover .container {
+			opacity: 0;
+			z-index: -99;
+		}
+	</style>
+
+</head>
+
+<body class="stretched side-push-panel" data-loader-html="<div><img src='{{ site.url }}/car/assets/media/page-loader.gif' alt='Loader'></div>">
+
+	<!-- Side Panel Overlay -->
+	<div class="body-overlay"></div>
+
+	{% include car/site_panel.html %}
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		{% include car/header.html %}
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-dark" style="padding: 160px 0;">
+
+			<div class="container clearfix" style="z-index: 9;">
+				<h1>LIÊN HỆ TOYOTA THÁI HÒA TỪ LIÊM</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="{{ site.url }}/car/">Trang chủ</a></li>
+					<li class="breadcrumb-item"><a href="{{ site.url }}/car/list/">Xe mới</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+				</ol>
+			</div>
+
+			<div id="page-title-gmap" class="gmap-bg gmap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+
+			<div class="video-wrap" style="position: absolute; top: 0; left: 0; height: 100%;">
+				<div class="video-overlay" style="background-color: rgba(0,0,0,0.6);"></div>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="clearfix">
+
+			{{ content }}
+
+		</section><!-- #content end -->
+
+		{% include car/footer.html %}
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+	<!-- Contact Button
+	============================================= -->
+	<div id="contact-me" class="icon-line-mail side-panel-trigger bgcolor"></div>
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="{{ site.url }}/car/assets/js/jquery.js"></script>
+	<script src="{{ site.url }}/car/assets/js/plugins.js"></script>
+
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyDeWUHsUprmZ_Tzi8uG50m3XdwHJWaDXzM"></script>
+	<script src="{{ site.url }}/car/assets/js/jquery.gmap.js"></script>
+
+	{% include car/footer_script.html %}
+
+	<script>
+		$('#page-title-gmap').gMap({
+			address: 'Tố Hữu, Mộ Lao, Hà Đông, Hà Nội',
+			maptype: 'ROADMAP',
+			zoom: 9,
+			markers: [
+				{
+					address: "Ngã ba Tố Hữu, phường Mộ Lao, quận Hà Đông, Thành phố Hà Nội",
+					html: '<div style="width: 300px;"><h2 style="margin-bottom: 8px;">Công ty cổ phần Toyota Thái Hoà Từ Liêm <span class="text-dark" style="text-transform: initial;">Chuyển động tiên phong</span></h2><p class="nobottommargin"><strong>Địa chỉ: Ngã ba Tố Hữu, Mộ Lao, quận Hà Đông, TP. Hà Nội</strong></p><p style="color: #e00;"><strong>HOTLINE:</strong> 090 315 6886</p><p><strong>Email:</strong> <a href="mailto:info@nguyentronghuynh.com">info@nguyentronghuynh.com</a></p><p><strong>Website:</strong> <a href="https://nguyentronghuynh.com/car/">https://nguyentronghuynh.com/car/</a></p></div>',
+					icon: {
+						image: "{{ site.url }}/car/assets/images/icons/map-icon-red.png",
+						iconsize: [32, 39],
+						iconanchor: [13,39]
+					}
+				}
+			],
+			doubleclickzoom: false,
+			controls: {
+				panControl: true,
+				zoomControl: true,
+				mapTypeControl: true,
+				scaleControl: false,
+				streetViewControl: false,
+				overviewMapControl: false
+			}
+		});
+	</script>
+
+</body>
+</html>

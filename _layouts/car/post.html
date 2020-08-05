@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="vi-VN">
+<head>
+
+    {% include car/head.html %}
+
+    {% include car/head_page.html %}
+
+    {% include car/head_script.html %}
+
+    {% include car/head_style.html %}
+
+</head>
+
+<body class="stretched side-push-panel" data-loader-html="<div><img src='{{ site.url }}/car/assets/media/page-loader.gif' alt='Loader'></div>">
+
+    <!-- Side Panel Overlay -->
+    <div class="body-overlay"></div>
+
+    {% include car/site_panel.html %}
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        {% include car/header.html %}
+
+        <!-- Page Title
+        ============================================= -->
+        <section id="page-title">
+
+            <div class="container clearfix">
+                <h1>{{ page.title }}</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ site.url }}/car/">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="{{ site.url }}/car/list/">Xe mới</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+            </div>
+
+        </section><!-- #page-title end -->
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container">
+                    <div class="jumbotron p-4 p-md-5 dark position-relative rounded" style="background: url('{{ site.url }}/{{ page.image }}') center center / cover;">
+                        <div class="col-md-6 px-0 py-3" style="z-index: 1">
+                            <!--strong class="d-inline-block mb-2 t600 uppercase ls2">World</strong-->
+                            <h2 class="t600 mb-2">{{ page.title }}</h2>
+                        </div>
+                        <div class="video-wrap rounded" style="position: absolute; top: 0; left: 0; height: 100%; z-index: 0">
+                            <div class="video-overlay" style="background: rgba(0,0,0,0.5);"></div>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <!-- Post Content
+                        ============================================= -->
+                        <div class="postcontent nobottommargin clearfix">
+    
+                            <div class="single-post nobottommargin">
+    
+                                <!-- Single Post
+                                ============================================= -->
+                                <div class="entry clearfix">
+                                    <!-- Entry Content
+                                    ============================================= -->
+                                    <div class="entry-content notopmargin">
+            
+                                        {{ content }}
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar
+                        ============================================= -->
+                        <div class="sidebar nobottommargin col_last clearfix">
+                            <div class="sidebar-widgets-wrap">
+                                <div class="card mt-4">
+                                    <img class="card-img-top" src="{{ site.url }}/images/avatar/avata-nguyentronghuynh.com.jpg" alt="Trọng Huỳnh Toyota Thái Hòa Từ Liêm">
+                                    <div class="card-body">
+                                        <h4 class="mb-1 color center">ĐƯỜNG DÂY NÓNG 24/24</h4>
+                                        <h2 class="card-title mb-2 center"><i class="icon-phone-sign position-relative mr-1 color" style="top: 4px;"></i> <a href="tel:0985629621">0985.629.621</a></h2>
+                                        <p class="card-text">Chúng tôi luôn sẵn sàng 24/7. Nhân viên chuyên gia của chúng tôi đang trực để trả lời câu hỏi của bạn. Bạn cũng có thể liên hệ qua email: <a class="btn-link" href="mailto:info@nguyentronghuynh.com">info@nguyentronghuynh.com</a></p>
+                                    </div>
+                                </div>
+                                               
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+
+        {% include car/footer.html %}
+
+    </div><!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+    <!-- Contact Button
+    ============================================= -->
+    <div id="contact-me" class="icon-line-mail side-panel-trigger bgcolor"></div>
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="{{ site.url }}/car/assets/js/jquery.js"></script>
+    <script src="{{ site.url }}/car/assets/js/plugins.js"></script>
+
+    {% include car/footer_script.html %}
+
+</body>
+</html>
