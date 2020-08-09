@@ -75,7 +75,7 @@ input:focus, textarea:focus{ border: 1px solid #989898; outline: none; }
 input[type="submit"]:focus { border:none !important}
 select::-ms-expand{ display:none;}
 iframe { border: 0;}
-ul { list-style: none outside none; list-style-type: none;}
+ul { list-style: none outside none; }
 ul, ol, dl {list-style-position: outside;}
 * { transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; }
 ::selection { color: #000; background:#dcdcdc; }
