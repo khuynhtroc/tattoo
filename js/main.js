@@ -1193,3 +1193,57 @@ $(function () {
                 $('b', this).toggleClass("caret caret-up");
             });
 });
+
+
+/*=======================================*/
+jQuery(document).ready(function(){
+    if ($('.addThis_listSharing').length > 0){
+        $(window).scroll(function(){
+            if(jQuery(window).scrollTop() > 100 ) {
+                jQuery('.addThis_listSharing').addClass('is-show');
+            } else {
+                jQuery('.addThis_listSharing').removeClass('is-show');
+            }
+        });
+        $('.content_popupform form.contact-form').submit(function(e){
+            e.preventDefault();     
+            $.ajax({
+                type: 'POST',
+                url:'/contact',
+                data: $('.content_popupform form.contact-form').serialize(),
+                success:function(data){     
+                    $('.modal-contactform.fade.in').modal('hide');
+                    setTimeout(function(){      
+                        $('.modal-succesform').modal('show');                   
+                        setTimeout(function(){                          
+                            $('.modal-succesform.fade.in').modal('hide');   
+                        }, 5000);
+                    },300);
+                },
+
+            })
+        });
+        $(".modal-succesform").on('hidden.bs.modal', function() {
+            location.reload();
+        });
+    }
+    if ($('.layoutProduct_scroll').length > 0 && jQuery(window).width() < 768) {
+        var curScrollTop = 0;
+        $(window).scroll(function(){    
+            var scrollTop = $(window).scrollTop();
+            if(scrollTop > curScrollTop  && scrollTop > 200 ) {
+                $('.layoutProduct_scroll').removeClass('scroll-down').addClass('scroll-up');
+            }
+            else {
+                if (scrollTop > 200 && scrollTop + $(window).height() + 150 < $(document).height()) {
+                    $('.layoutProduct_scroll').removeClass('scroll-up').addClass('scroll-down');    
+                }
+            }
+            if(scrollTop < curScrollTop  && scrollTop < 200 ) {
+                $('.layoutProduct_scroll').removeClass('scroll-up').removeClass('scroll-down');
+            }
+            curScrollTop = scrollTop;
+        });
+    }
+});
+
